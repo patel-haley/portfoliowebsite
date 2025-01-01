@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+.header {
+    background-color: #131313;
+    padding: 120px 20px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 50px;
+    gap: 30px;
+}
+
+.header .content {
+    max-width: 1150px;
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.header h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.header p {
+    font-size: 1.3rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+  
+.profile-pic {
+    width: 30vw; 
+    height: 30vw;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+
+.social-buttons {
+    display: flex; 
+    justify-content: right; 
+    gap: 3px; 
+    margin-top: 30px;
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 2px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github {
+    background-color: #131313;
+}
+
+.linkedin {
+    background-color: #131313;
+}
+
+.email {
+    background-color: #131313;
+}
+
+.social-button i {
+    margin-right: 8px;
+    font-size: 2rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-button:hover {
+    opacity: 0.8;
+}
+
+
+
+body {
+    background-color: #131313;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border: 1px solid #131313; 
+    border-radius: 8px;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+
+.job, .project {
+    background-color: #1e1e1e; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#experience .job {
+    margin-bottom: 30px;
+}
+
+#experience .job h3 {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+#experience .job p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-info {
+    max-width: 100%; 
+    margin-right: 20px;
+    flex: 1;
+}
+
+.project-info h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.project-image-container {
+    max-width: 30%; 
+    flex-shrink: 0;
+}
+
+.project-image {
+    width: 100%; 
+    height: auto; 
+}
+
+
+#leadership-experience {
+    background-color: #131313; 
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#leadership-experience h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.leadership-role {
+    background-color: #1e1e1e; 
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+}
+
+.leadership-experience h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.leadership-experience p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.leadership-role p strong {
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+    .social-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .social-button i {
+        font-size: 1.2rem; 
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-info {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .project-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+    }
+
+    .project-image {
+        max-width: 10%;
+        margin-top: 10px;
+    }
+    
+    #leadership-experience {
+        padding: 20px;
+    }
+
+    #leadership-experience h2 {
+        font-size: 2rem;
+    }
+
+    .leadership-role h3 {
+        font-size: 1.6rem;
+    }
+
+    .leadership-role p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+      display: none;
+    }
+}
