@@ -315,10 +315,3 @@ strong {
     }
 }
 
-@media (max-width: 480px) {
-    .profile-picture {
-      display: none;
-    }
-}
-
-
