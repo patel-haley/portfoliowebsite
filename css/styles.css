@@ -315,3 +315,19 @@ strong {
     }
 }
 
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        order: -1; 
+        width: 70%; 
+        height: auto;
+        margin-bottom: 20px; 
+    }
+
+    .header .content {
+        max-width: 100%;
+    }
+}
