@@ -20,35 +20,35 @@ const PROJECTS = [
     title: "skycraft",
     description: "drone prototype designed to assist first responders by providing 3D renders of disaster-affected areas using video footage. utilizes temperature/humidity sensors and gaussian splatting to provide real-time updates.",
     tags: ["ai", "embedded systems"],
-    image: "",
+    image: "https://github.com/patel-haley/portfoliowebsite/blob/main/blue%20gradient%20travel%20(Presentation%20(169)).png?raw=true",
     links: [{ label: "github", href: "https://github.com/vaishvijs13/sky-craft" }]
   },
   {
     title: "insureply",
     description: "built for a fast-scaling insurance company with 500+ clients, the all-in-one dashboard allows each client to securely access and manage their approved insurance policies",
     tags: ["ui/ux", "web development"],
-    image: "",
+    image: "https://github.com/patel-haley/portfoliowebsite/blob/main/insureply.png?raw=true",
     links: [{ label: "github", href: "https://github.com/patel-haley/insureply" }]
   },
   {
     title: "aikya's shakti",
     description: "aikya, my space settlement  design research project, won 3rd place internationally in the nasa-founded, national space society space settlement contest out of 29,000 competitors. shakti was developed as a digital therapist to support the well-being of aikya's residents.",
     tags: ["ai", "hci", "research"],
-    image: "",
+    image: "https://github.com/patel-haley/portfoliowebsite/blob/main/aikya.png?raw=true",
     links: [{ label: "project", href: "https://35241227-95db-4791-8d6f-e78f71be0b18.filesusr.com/ugd/dee340_d2adbbd77b5b4119a3e019831cd466e0.pdf" }, { label: "github", href: "https://github.com/patel-haley/aikya-shakti" }]
   },
   {
     title: "shipora",
-    description: "international shipping company website developed during my internship at finabot canada inc. focused on seamless ui/ux integration with backend functionality, ensuring optimal user experience for shipping logistics.",
+    description: "international shipping company website developed during my internship at finabots canada inc. focused on seamless ui/ux integration with backend functionality, ensuring optimal user experience for shipping logistics.",
     tags: ["ui/ux", "web development"],
-    image: "",
+    image: "https://raw.githubusercontent.com/patel-haley/portfoliowebsite/a8485036b06dbd1656a996855f20cdee0e3c23af/shipora2.svg",
     links: []
   }
 ];
 
 const EXPERIENCE = [
   {
-    role: "undergraduate research assistant",
+    role: "undergraduate research",
     org: "university of waterloo",
     dates: "sept 2025 – present",
     location: "",
@@ -62,15 +62,15 @@ const EXPERIENCE = [
     dates: "may 2025 – aug 2025",
     location: "",
     points: [
-      "developed Python script automations & APIs to sync SAP & JIRA, streamlining 15+ field mappings and minimizing manual updates by 80%",
-      "built data pipelines with SQL/Trino to process 10K+ SAP records for seamless JIRA integration",
-      "automated JIRA workflows for Bell’s network team, boosting project tracking efficiency across 50+ teams"
+      "developed python automations & APIs to sync SAP & JIRA, minimizing manual updates by 80%",
+      "built data pipelines with SQL/Trino to process 10K+ SAP records for JIRA integration",
+      "automated JIRA workflows for network department, boosting project efficiency across 50+ teams"
     ],
     tags: ["python", "SAP", "JIRA", "api development", "automation"]
   },
   {
     role: "full-stack development intern",
-    org: "finabot canada inc.",
+    org: "finabots canada inc.",
     dates: "jul 2023 – mar 2024",
     location: "",
     points: [
@@ -220,20 +220,34 @@ function Projects() {
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight" data-testid="text-projects-title">projects</h2>
         <a href="#" className="text-sm opacity-70 hover:opacity-100 transition-opacity" data-testid="link-projects-all">See all →</a>
       </div>
-      
+
       <div className="grid lg:grid-cols-2 gap-6">
         {PROJECTS.map((project, index) => (
-          <div key={project.title} className="glass-card group rounded-2xl border overflow-hidden hover:shadow-xl transition-all backdrop-blur bg-white/60 dark:bg-white/5" data-testid={`card-project-${index}`}>
-            <img 
-              src={project.image}
-              alt={`${project.title} preview`}
-              className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
-              data-testid={`img-project-${index}`}
-            />
+          <div
+            key={project.title}
+            className="glass-card group rounded-2xl border overflow-hidden hover:shadow-xl transition-all backdrop-blur bg-white/60 dark:bg-white/5"
+            data-testid={`card-project-${index}`}
+          >
+            {/* IMAGE: full image visible, no crop */}
+            <div className="relative w-full aspect-[16/9] bg-white/70 dark:bg-white/10">
+              <img
+                src={project.image}
+                alt={`${project.title} preview`}
+                className="absolute inset-0 w-full h-full object-contain group-hover:scale-[1.02] transition-transform"
+                data-testid={`img-project-${index}`}
+              />
+            </div>
+
             <div className="p-6">
               <div className="flex items-center gap-2 text-xs mb-3 flex-wrap">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border px-2 py-0.5 opacity-70" data-testid={`tag-${tag.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>{tag}</span>
+                  <span
+                    key={tag}
+                    className="rounded-full border px-2 py-0.5 opacity-70"
+                    data-testid={`tag-${tag.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                  >
+                    {tag}
+                  </span>
                 ))}
               </div>
               <h3 className="text-xl font-semibold tracking-tight group-hover:underline mb-2" data-testid={`text-project-title-${index}`}>{project.title}</h3>
@@ -252,6 +266,7 @@ function Projects() {
     </section>
   );
 }
+
 
 function Experience() {
   return (
